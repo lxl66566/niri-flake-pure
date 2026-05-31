@@ -64,16 +64,16 @@ let
 
   unstable-note = ''
     > [!important]
-    > This option is not yet available in stable niri.
+    > This option requires niri built from a recent commit.
     >
-    > If you wish to modify this option, you should make sure ${link' "programs.niri.package"} is set to ${pkg-link "niri-unstable"}.
+    > If you wish to modify this option, you should make sure ${link' "programs.niri.package"} is set to ${pkg-link "niri"}.
     >
     > Otherwise, your system might fail to build.
   '';
 
   unstable-enum = values: ''
     > [!important]
-    > The following values for this option are not yet available in stable niri:
+    > The following values for this option require a recent niri build:
     >
     ${lib.pipe values [
       (map (display-value {
@@ -83,7 +83,7 @@ let
       (lib.concatStringsSep "\n")
     ]}
     >
-    > If you wish to use one of the mentioned values, you should make sure ${link' "programs.niri.package"} is set to ${pkg-link "niri-unstable"}.
+    > If you wish to use one of the mentioned values, you should make sure ${link' "programs.niri.package"} is set to ${pkg-link "niri"}.
     >
     > Otherwise, your system might fail to build.
   '';
